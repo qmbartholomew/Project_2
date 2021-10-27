@@ -8,6 +8,12 @@ nav {
     width: 100%;
     background-color: black;
 }
+.red {
+    color: red;
+}
+.green {
+    color: green;
+}
 
 /*          INDEX PAGE STYLING           */
 .iDisplay {
@@ -16,16 +22,57 @@ nav {
     flex-direction: column;
 }
 .row {
-    height: 10%;
+    height: 7.5%;
     width: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 .row img {
-    height: 85%;
+    height: 100%;
     width: auto;
     border: 1px solid rgba(0, 0, 0, 0.384);
     border-radius: 5px;
+    object-fit: fill;
+}
+.row a, :visited {
+    text-decoration: none;
+    color: black;
+}
+.nametag:hover {
+    padding: 1px 3px;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    transition: .3s;
+}
+.rowSep {
+    width: 100%;
+    margin: 6px 0 3px 0;
+}
+.spacer-1 {
+    height: 100%;
+    width: 15%;
+    align-self: center;
+}
+.spacer-2 {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.spacer-3 {
+    height: 100%;
+    width: 5%;
+    align-self: center;
+}
+.spacer-4 {
+    height: 100%;
+    width: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 /*          SHOW PAGE STYLING           */
@@ -42,7 +89,7 @@ nav {
 .itmShow img {
     width: 80%;
 }
-hr {
+.vert {
     height: 80vh;
     width: .15vw;
     background-color: blue;
@@ -58,4 +105,11 @@ hr {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+}
+
+/*          EDIT PAGE STYLING           */
+fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
 }

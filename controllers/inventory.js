@@ -33,54 +33,39 @@ router.post("/", (req, res) => {
     })
 })
 
-// destroy route - delete request - /fruits/:id
+// Destroy/Delete route
 router.delete("/:id", (req, res) => {
-    // grab the id from params
     const id = req.params.id
-    // delete the fruit
-    Fruit.findByIdAndRemove(id)
-    .then((fruit) => {
-        // redirect user back to index
-        res.redirect("/fruits")
+    Inventory.findByIdAndRemove(id)
+    .then(() => {
+        res.redirect("/inventory")
     })
-     // error handling
      .catch((error) => {
         res.json({error})
     })
 })
 
-// edit route - get request - /fruits/:id/edit
+// Edit route
 router.get("/:id/edit", (req, res) => {
-    // get the id from params
     const id = req.params.id
 
-    // get the fruit with the matching id
-    Fruit.findById(id)
-    .then((fruit) => {
-        // render the edit page template with the fruit data
-        res.render("fruits/edit.liquid", { fruit })
+    Inventory.findById(id)
+    .then((item) => {
+        res.render("edit.liquid", {item})
     })
-    // error handling
     .catch((error) => {
         res.json({error})
     })
 })
 
-// update route - put request - "/fruits/:id"
+// Update route
 router.put("/:id", (req, res) => {
-    // get the id from params
     const id = req.params.id
     
-    // convert the checkbox property to true or false
-    req.body.readyToEat = req.body.readyToEat === "on" ? true : false
-
-    // update the item with the matching id
-    Fruit.findByIdAndUpdate(id, req.body, {new: true})
-    .then((fruit) => {
-        // redirect user back to index
-        res.redirect("/fruits")
+    Inventory.findByIdAndUpdate(id, req.body, {new: true})
+    .then(() => {
+        res.redirect("/inventory")
     })
-     // error handling
      .catch((error) => {
         res.json({error})
     })

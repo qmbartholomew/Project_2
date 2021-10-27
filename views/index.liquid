@@ -3,12 +3,28 @@
 <div class="iDisplay">
     {% for item in items %}
     <div class="row">
-        <a href="/inventory/{{item._id}}"><img src="{{item.img}}" alt=""></a>
-        <a href="/inventory/{{item._id}}">{{item.name}}</a>
-        <h4 class="pricePaid">${{item.pricePaid}}</h4>
-        <h4 class="priceListed">${{item.pricePaid}}</h4>
-        <div class="datePurchased">{{item.datePurchased}}</div>
+        <div class="spacer-1">
+            <a href="/inventory/{{item._id}}"><img src="{{item.img}}" alt=""></a>
+        </div>
+        <div class="spacer-2">
+            <a href="/inventory/{{item._id}}" class="nametag">{{item.name}}</a>
+        </div>
+        <div class="spacer-3">
+            <h4 class="pricePaid">${{item.pricePaid}}</h4>
+        </div>
+        <div class="spacer-3">
+            {% if item.priceListed > item.pricePaid %}
+            <h4 class="priceListed green">
+            {% else %}
+            <h4 class="priceListed red">
+            {% endif %}
+            ${{item.priceListed}}</h4>
+        </div>
+        <div class="spacer-4">
+            <div class="datePurchased">{{item.datePurchased}}</div>
+        </div>
     </div>
+    <hr class="rowSep">
     {% endfor %}
 </div>
 

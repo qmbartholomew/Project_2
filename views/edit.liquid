@@ -3,24 +3,24 @@
 
 <div>
 
- <form action="/fruits/{{ fruit._id }}?_method=PUT" method="post">
+ <form action="/inventory/{{item._id}}?_method=PUT" method="post">
   <fieldset>
-    <legend>Edit {{ fruit.name }}</legend>
+    <legend>Edit {{item.name}}</legend>
         <label>
-            Name: <input type="text" name="name" placeholder="enter fruit name" value="{{fruit.name}}"/>
+            Name: <input type="text" name="name" value="{{item.name}}"/>
         </label>
         <label>
-            Color: <input type="text" name="color" placeholder="enter fruit color" value="{{fruit.color}}"/>
+            Image Link: <input type="text" name="img" value="{{item.img}}"/>
         </label>
         <label>
-            Ready to Eat: <input type="checkbox" name="readyToEat"
-            {% if fruit.readyToEat == true %}
-            checked
-            {% endif %}
-            >
+            Purchase Price: <input type="number" name="pricePaid" value="{{item.pricePaid}}"/>
+        </label>
+            Listed Price: <input type="number" name="priceListed" value="{{item.priceListed}}"/>
+        </label>
+            Date Purchased: <input type="date" name="datePurchased" value="{{item.datePurchased}}"/>
         </label>
     </fieldset>
-    <input type="submit" value="update {{fruit.name}}"/>
+    <input type="submit" value="Edit {{item.name}}"/>
  </form>
 
 </div>
