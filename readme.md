@@ -9,11 +9,16 @@ This is a simple inventory tracker for general use. It will display an image of 
 ## Models
 
 Inventory:
-*Item Name
-*Image
-*Price Paid
-*Price Listed
-*Date Purchased
+
+* Item Name
+
+* Image
+
+* Price Paid
+
+* Price Listed
+
+* Date Purchased
 
 ## Route Table
 
@@ -30,15 +35,21 @@ Inventory:
 ## User Stories
 
 A user should be able to view all items in inventory
+
 A user should be able to view a single/particular item 
+
 A user should be able to add a new item to the inventory
+
 A user should be able to edit an item from the inventory
+
 A user should be able to delete an item from the inventory
 
 > The below are user stories to be completed beyond MVP
 
 As a user, I should be able to see my total portfolio value
+
 As a user, I should see my listed price highlighted in red if it's lower than my paid price
+
 As a user, I should see my listed price highlighted in green if it's higher than my paid price
 
 ## Challenges
@@ -46,9 +57,14 @@ As a user, I should see my listed price highlighted in green if it's higher than
 
 ## List of Technologies
 
-*HTML
-*CSS
-*JS
-*Express
-*Liquid
-*Mongoose
+* HTML
+
+* CSS
+
+* JS
+
+* Express
+
+* Liquid
+
+* Mongoose
