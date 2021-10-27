@@ -1,0 +1,15 @@
+{% layout 'layout.liquid' %}
+{% block content %}
+<div class="iDisplay">
+    {% for item in items %}
+    <div class="row">
+        <a href="/inventory/{{item._id}}"><img src="{{item.img}}" alt=""></a>
+        <a href="/inventory/{{item._id}}">{{item.name}}</a>
+        <h4 class="pricePaid">${{item.pricePaid}}</h4>
+        <h4 class="priceListed">${{item.pricePaid}}</h4>
+        <div class="datePurchased">{{item.datePurchased}}</div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

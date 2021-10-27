@@ -1,0 +1,25 @@
+{% layout "layout.liquid" %}
+{% block content %}
+<div class="sDisplay">
+    <div class="itmShow">
+        <h1>{{item.name}}</h1>
+        <img src="{{item.img}}" alt="">
+    </div>
+    <hr>
+    <div class="itmInfo">
+        <h4>Price Paid:</h4>
+        <p class="paidPrice">${{item.pricePaid}}</p>
+        <h4>Price Listed:</h4>
+        <p class="endPrice">${{item.pricePaid}}</p>
+        <h5 class="date">Date Purchased:</h5>
+        <div class="datePurchased">{{item.datePurchased}}</div>
+        <div class="showBtns">
+            <a href="/fruits/{{ fruit._id }}/edit"><button>EDIT</button></a>
+            <form action="/fruits/{{ fruit._id }}?_method=DELETE" method="post">
+            <input type="submit" value="DELETE">
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

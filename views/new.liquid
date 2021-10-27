@@ -1,0 +1,29 @@
+{% layout "layout.liquid" %}
+{% block content %}
+
+<div>
+
+ <form action="/inventory" method="post">
+  <fieldset>
+    <legend>Create a New Inventory Item</legend>
+        <label>
+            Name: <input type="text" name="name" placeholder="Enter item name"/>
+        </label>
+        <label>
+            Image Link: <input type="text" name="img" placeholder="Insert image link here"/>
+        </label>
+        <label>
+            Purchase Price: <input type="number" name="pricePaid"/>
+        </label>
+            Listed Price: <input type="number" name="priceListed"/>
+        </label>
+            Date Purchased: <input type="date" name="datePurchased"/>
+        </label>
+    </fieldset>
+    <input type="submit" value="Create New Item"/>
+ </form>
+
+</div>
+
+
+{% endblock %}
