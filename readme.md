@@ -44,16 +44,14 @@ A user should be able to edit an item from the inventory
 
 A user should be able to delete an item from the inventory
 
-> The below are user stories to be completed beyond MVP
+A user will see their listed price displayed in red if it's lower than the price paid
 
-As a user, I should be able to see my total portfolio value
+A user will see their listed price displayed in green if it's higher than the price paid
 
-As a user, I should see my listed price highlighted in red if it's lower than my paid price
-
-As a user, I should see my listed price highlighted in green if it's higher than my paid price
 
 ## Challenges
 
+CSS always presents a challenge for me. I was able to accomplish most things I wanted to with this project, however making a total value for each section (price paid + price listed) was challenging and I wasn't able to get it working to the point I would have been happy.
 
 ## List of Technologies
 
@@ -61,7 +59,7 @@ As a user, I should see my listed price highlighted in green if it's higher than
 
 * CSS
 
-* JS
+* JS/Jquery
 
 * Express
 

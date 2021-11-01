@@ -7,17 +7,19 @@
   <fieldset>
     <legend>Edit {{item.name}}</legend>
         <label>
-            Name: <input type="text" name="name" value="{{item.name}}"/>
+            Name:<br> <input type="text" name="name" value="{{item.name}}"/>
         </label>
         <label>
-            Image Link: <input type="text" name="img" value="{{item.img}}"/>
+            Image Link:<br> <input type="text" name="img" value="{{item.img}}"/>
         </label>
         <label>
-            Purchase Price: <input type="number" name="pricePaid" value="{{item.pricePaid}}"/>
+            Purchase Price:<br> <input type="number" name="pricePaid" value="{{item.pricePaid}}"/>
         </label>
-            Listed Price: <input type="number" name="priceListed" value="{{item.priceListed}}"/>
+        <label>
+            Listed Price:<br> <input type="number" name="priceListed" value="{{item.priceListed}}"/>
         </label>
-            Date Purchased: <input type="date" name="datePurchased" value="{{item.datePurchased}}"/>
+        <label>
+            Date Purchased:<br> <input type="date" name="datePurchased" value="{{item.datePurchased}}"/>
         </label>
     </fieldset>
     <input type="submit" value="Edit {{item.name}}"/>

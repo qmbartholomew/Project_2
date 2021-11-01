@@ -1,10 +1,19 @@
 {% layout 'layout.liquid' %}
 {% block content %}
+<div class="legend">
+
+</div>
 <div class="iDisplay">
     {% for item in items %}
     <div class="row">
         <div class="spacer-1">
-            <a href="/inventory/{{item._id}}"><img src="{{item.img}}" alt=""></a>
+            <a href="/inventory/{{item._id}}"><img src="
+                {% if item.img == '' || null || undefined %}
+                data:image/png;base64,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
+                {% else %}
+                {{item.img}}
+                {% endif %}
+                " alt=""></a>
         </div>
         <div class="spacer-2">
             <a href="/inventory/{{item._id}}" class="nametag">{{item.name}}</a>
@@ -23,9 +32,20 @@
         <div class="spacer-4">
             <div class="datePurchased">{{item.datePurchased}}</div>
         </div>
+        <div class="spacer-5">
+            <a href="/inventory/{{item._id}}/edit"><button>EDIT</button></a>
+            <form action="/inventory/{{item._id}}?_method=DELETE" method="post">
+                <input type="submit" value="DELETE">
+            </form>
+        </div>
     </div>
     <hr class="rowSep">
     {% endfor %}
 </div>
-
+<div class="totalsDisplay">
+    <h2>Paid:</h2>
+    <h4>{{totals.totalPaid}}</h4>
+    <h2>Listed:</h2>
+    <h4>{{totals.totallisted}}</h4>
+</div>
 {% endblock %}
